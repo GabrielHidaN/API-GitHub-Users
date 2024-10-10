@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Protest+Strike&display=swap');
+/*
+font text github : protest strike
+
+font p : assistant
+
+
+*/
+
+.header{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.header-paragrafo{
+    width: 200px;
+    height: 200px;
+}
+
+
+#h1-header{
+font-family: 'Protest Strike';
+color: black;
+font-weight: bolder;
+}
+
+#p-header{
+    font-family: 'Assistant';
+    font-weight: 600;
+    font-size: medium;
+}
