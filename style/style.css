@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Protest+Strike&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Bungee&display=swap');
 /*
-font text github : protest strike
+font text github : Bungee
 
 font p : assistant
 
 
 */
+
+body{
+    background-color: rgb(16, 16, 16);
+}
 
 .header{
     display: flex;
@@ -15,21 +19,65 @@ font p : assistant
     flex-direction: column;
 }
 
-
 .header-paragrafo{
-    width: 200px;
+    width: 900px;
     height: 200px;
+    border: 1px solid rgb(76, 76, 77); 
+    border-radius: 10px;
+    padding: 12px; 
+    box-shadow: 2px 5px 8px rgba(152, 42, 237, 0.653);;
 }
 
 
+
 #h1-header{
-font-family: 'Protest Strike';
-color: black;
-font-weight: bolder;
+font-family: 'Bungee';
+color: rgb(238, 235, 235);
+text-shadow: 2px 2px 5px rgba(152, 42, 237, 0.653);
+
 }
 
 #p-header{
     font-family: 'Assistant';
     font-weight: 600;
-    font-size: medium;
+    font-size: large;
+    color: rgb(255, 255, 255);
+
 }
+
+.main-content{
+    margin-top: 30px;
+    border-top: 1px solid rgb(76, 76, 77);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.div-form{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#h2-form{
+    color: rgb(255, 255, 255);
+    font-family: 'Bungee'; 
+    text-shadow: 2px 2px 5px rgba(152, 42, 237, 0.653);
+}
+
+input[type="text"] {
+    width: 300px; /* Largura do campo de texto */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 5px;
+    border: 2px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+  }
+  
+  input[type="text"]::placeholder {
+    color: #888; /* Cor do texto placeholder */
+    font-style: italic; /* Estilo do texto placeholder */
+  }
