@@ -24,15 +24,6 @@ body{
     flex-direction: column;
 }
 
-/*.header-paragrafo{
-    width: 900px;
-    height: 200px;
-    border: 1px solid rgb(76, 76, 77); 
-    border-radius: 10px;
-    padding: 12px; 
-    box-shadow: 2px 5px 8px rgba(152, 42, 237, 0.653);;
-}*/
-
 
 
 #h1-header{
@@ -149,7 +140,7 @@ input[type="text"] {
 
 .header-text{
     background-color: var(--cor-principal);
-    width: 800px;
+    width: 830px;
     padding: 0px 30px 0px 30px;
     border-radius: 10px;
     box-shadow: 2px 3px 8px #5f5858e0;
