@@ -4,6 +4,7 @@ button.addEventListener('click', function() {
     // Pega o valor do input
     let username = document.getElementById('username').value;
 
+
     if (!username) {
         alert('Por favor, insira um nome de usuário.');
         return; 
