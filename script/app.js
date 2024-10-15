@@ -1,30 +1,34 @@
+const button = document.querySelector('.button-form');
 
-// Solicita o nome de usuário ao usuário
-const pesquisarUser = ()=>{
-// Solicita o nome de usuário ao usuário
-    let username = encodeURIComponent(document.getElementsByClassName('username').value);
-// URL da API do GitHub
-    let url = `https://api.github.com/users/${username}`;
+button.addEventListener('click', function() {
+    // Pega o valor do input
+    let username = document.getElementById('username').value;
 
     if (!username) {
         alert('Por favor, insira um nome de usuário.');
         return; 
     }
 
+    // Codifica o nome de usuário corretamente
+    username = encodeURIComponent(username);
+    
+    // URL da API do GitHub
+    let url = `https://api.github.com/users/${username}`;
 
+    // Faz a requisição com fetch
     fetch(url)
     .then(response => {
-        if(!response.ok){
+        // Verifica se a requisição foi bem-sucedida
+        if (!response.ok) {
             throw new Error('Erro na Requisição: ' + response.status);
         }
         return response.json();
-    }) // Converte a resposta para JSON
-
+    })
     .then(data => {
-        if (data.message !== "Not Found") {
-            // Limpa a tela (em navegadores não há um comando como `cls`, então omitido)
-
-
+        // Verifica se o usuário foi encontrado
+        if (data.message === "Not Found") {
+            alert('@@@@@ Usuário Não Encontrado! @@@@@');
+        } else {
             // Captura os dados do perfil
             let name = data.name || 'Não informado';
             let location = data.location || 'Não informado';
@@ -33,21 +37,14 @@ const pesquisarUser = ()=>{
             let following = data.following || 0;
 
             // Exibe os dados
-
             alert(`Nome: ${name}`);
             alert(`Localização: ${location}`);
             alert(`Bio: ${bio}`);
             alert(`Seguidores: ${followers}`);
             alert(`Seguindo: ${following}`);
-        } else {
-
-            alert('@@@@@ Usuário Não Encontrado! @@@@@');
         }
     })
     .catch(error => {
-        alert('Erro ao fazer a requisição:', error);
+        alert('Erro ao fazer a requisição: ' + error.message);
     });
-
-}
-
-const button = document.querySelector('.button-form').addEventListener('click' , pesquisarUser);
+});
