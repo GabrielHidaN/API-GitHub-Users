@@ -37,7 +37,7 @@ button.addEventListener('click', function() {
             let following = data.following || 0;
 
             // Exibe os dados
-            alert(`Nome: ${name}`);
+            console.log(`Nome: ${name}`);
             alert(`Localização: ${location}`);
             alert(`Bio: ${bio}`);
             alert(`Seguidores: ${followers}`);
